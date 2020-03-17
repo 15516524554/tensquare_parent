@@ -1,0 +1,16 @@
+server:
+  port: 9092
+spring:
+  rabbitmq:
+    host: 192.168.179.131
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 120000
+  listener:
+    simple:
+      concurrency: 1
+      max-concurrency: 1
+      acknowledge-mode: manual
+      prefetch: 1
